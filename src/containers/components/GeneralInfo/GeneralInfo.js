@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import UnderlineInput from '../../../components/UnderlineInput';
 
 function GeneralInfo(props) {
 const { onChange } = props;    
@@ -15,24 +16,24 @@ const changedField = (e) => {
     return (
         <>
             <div className="row">
-                <input autoComplete="off" name="name" onChange={changedField} placeholder="имя" />
-                <input autoComplete="off" name="worldview" onChange={changedField} placeholder="мировозрение" />
-                <input autoComplete="off" name="playerName" onChange={changedField} placeholder="игрок" />
+                <UnderlineInput name="name" onChange={changedField} placeholder="имя" />
+                <UnderlineInput name="worldview" onChange={changedField} placeholder="мировозрение" />
+                <UnderlineInput name="playerName" onChange={changedField} placeholder="игрок" />
             </div>
             <div className="row">
-                <input autoComplete="off" name="level" onChange={changedField} placeholder="уровень" />
-                <input autoComplete="off" name="god" onChange={changedField} placeholder="божество" />
-                <input autoComplete="off" name="homeland" onChange={changedField} placeholder="родина" />
+                <UnderlineInput name="level" onChange={changedField} placeholder="уровень" />
+                <UnderlineInput name="god" onChange={changedField} placeholder="божество" />
+                <UnderlineInput name="homeland" onChange={changedField} placeholder="родина" />
             </div>
             <div className="row">
-                <input autoComplete="off" name="race" onChange={changedField} placeholder="народ" />
-                <input autoComplete="off" name="size" onChange={changedField} placeholder="размер" />
-                <input autoComplete="off" name="sex" onChange={changedField} placeholder="пол" />
-                <input autoComplete="off" name="age" onChange={changedField} placeholder="возраст" />
-                <input autoComplete="off" name="height" onChange={changedField} placeholder="рост" />
-                <input autoComplete="off" name="weight" onChange={changedField} placeholder="вес" />
-                <input autoComplete="off" name="hair" onChange={changedField} placeholder="волосы" />
-                <input autoComplete="off" name="eyes" onChange={changedField} placeholder="глаза" />
+                <UnderlineInput name="race" onChange={changedField} placeholder="народ" />
+                <UnderlineInput name="size" onChange={changedField} placeholder="размер" />
+                <UnderlineInput name="sex" onChange={changedField} placeholder="пол" />
+                <UnderlineInput name="age" onChange={changedField} placeholder="возраст" />
+                <UnderlineInput name="height" onChange={changedField} placeholder="рост" />
+                <UnderlineInput name="weight" onChange={changedField} placeholder="вес" />
+                <UnderlineInput name="hair" onChange={changedField} placeholder="волосы" />
+                <UnderlineInput name="eyes" onChange={changedField} placeholder="глаза" />
             </div>
         </>
     );
