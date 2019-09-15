@@ -16,19 +16,3 @@ code {
     monospace;
 }
 
-
-input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #222021;
-  margin: 5px;
-  font-family: 'Philosopher';
-}
-
-input::placeholder {
-  color: #27221f;
-} 
-
-input:focus {
-  outline: none;
-}
