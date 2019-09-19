@@ -18,33 +18,33 @@ function BaseStats(props) {
     <div>
       <div>
         <BoxLabel>СИЛ</BoxLabel>
-        <BoxInput name="значение-сил" onChange={changedField} />
-        <BoxInput name="модификатор-сил" onChange={changedField} />
+        <BoxInput name="value-str" onChange={changedField} />
+        <BoxInput name="modifier-str" onChange={changedField} />
       </div>
       <div>
         <BoxLabel>ЛВК</BoxLabel>
-        <BoxInput name="значение-лвк" onChange={changedField} />
-        <BoxInput name="модификатор-лвк" onChange={changedField} />
+        <BoxInput name="value-dex" onChange={changedField} />
+        <BoxInput name="modifier-dex" onChange={changedField} />
       </div>
       <div>
         <BoxLabel>ВЫН</BoxLabel>
-        <BoxInput name="значение-вын" onChange={changedField} />
-        <BoxInput name="модификатор-вын" onChange={changedField} />
+        <BoxInput name="value-const" onChange={changedField} />
+        <BoxInput name="modifier-const" onChange={changedField} />
       </div>
       <div>
         <BoxLabel>ИНТ</BoxLabel>
-        <BoxInput name="значение-инт" onChange={changedField} />
-        <BoxInput name="модификатор-инт" onChange={changedField} />
+        <BoxInput name="value-int" onChange={changedField} />
+        <BoxInput name="modifier-int" onChange={changedField} />
       </div>
       <div>
         <BoxLabel>МДР</BoxLabel>
-        <BoxInput name="значение-мдр" onChange={changedField} />
-        <BoxInput name="модификатор-мдр" onChange={changedField} />
+        <BoxInput name="value-wis" onChange={changedField} />
+        <BoxInput name="modifier-wis" onChange={changedField} />
       </div>
       <div>
         <BoxLabel>ХАР</BoxLabel>
-        <BoxInput name="значение-хар" onChange={changedField} />
-        <BoxInput name="модификатор-хар" onChange={changedField} />
+        <BoxInput name="value-char" onChange={changedField} />
+        <BoxInput name="modifier-char" onChange={changedField} />
       </div>
     </div>
   );
