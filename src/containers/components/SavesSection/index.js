@@ -28,24 +28,24 @@ function SavesSection(props) {
        <StyledRoot>
            <StyledDiv>
                 <BoxLabel>Стойкость</BoxLabel>
-                <BoxInput name="всего-стойкость" onChange={changedField} />
-                <BoxInput name="модиф-хар-стойкость" onChange={changedField} />
-                <BoxInput name="модиф-маг-стойкость" onChange={changedField} />
-                <BoxInput name="модиф-проч-стойкость" onChange={changedField} />
+                <BoxInput name="all-const" onChange={changedField} />
+                <BoxInput name="mod-const" onChange={changedField} />
+                <BoxInput name="mod-mage-const" onChange={changedField} />
+                <BoxInput name="mod-other-const" onChange={changedField} />
             </StyledDiv>
            <StyledDiv>
                 <BoxLabel>Реакция</BoxLabel>
-                <BoxInput name="всего-реакция" onChange={changedField} />
-                <BoxInput name="модиф-хар-реакция" onChange={changedField} />
-                <BoxInput name="модиф-маг-реакция" onChange={changedField} />
-                <BoxInput name="модиф-проч-реакция" onChange={changedField} />
+                <BoxInput name="all-react" onChange={changedField} />
+                <BoxInput name="mod-react" onChange={changedField} />
+                <BoxInput name="mod-mage-react" onChange={changedField} />
+                <BoxInput name="mod-other-react" onChange={changedField} />
             </StyledDiv>
            <StyledDiv>
                 <BoxLabel>Воля</BoxLabel>
-                <BoxInput name="всего-воля" onChange={changedField} />
-                <BoxInput name="модиф-хар-воля" onChange={changedField} />
-                <BoxInput name="модиф-маг-воля" onChange={changedField} />
-                <BoxInput name="модиф-проч-воля" onChange={changedField} />
+                <BoxInput name="all-will" onChange={changedField} />
+                <BoxInput name="mod-will" onChange={changedField} />
+                <BoxInput name="mod-mage-will" onChange={changedField} />
+                <BoxInput name="mod-other-will" onChange={changedField} />
             </StyledDiv>
        </StyledRoot> 
     );

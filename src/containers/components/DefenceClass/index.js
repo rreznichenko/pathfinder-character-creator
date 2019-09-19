@@ -4,7 +4,7 @@ function DefenceClass() {
     return (
        <>
         <span>Класс Брони</span>
-        <input placeholder="всего" />
+        <input placeholder="all-def" />
         <span>=</span>
         <span>10</span>
         <span>+</span>
