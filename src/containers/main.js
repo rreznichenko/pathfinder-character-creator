@@ -6,7 +6,8 @@ import BasicStats from './components/BasicStats';
 // import DefenceClass from './components/DefenceClass';
 // import SurpriseSection from './components/SurpriseSection';
 // import TouchAttackSection from './components/TouchAttackSection';
-import SavesSection from './components/SavesSection';
+// import SavesSection from './components/SavesSection';
+import CmSection from './components/CmSection';
 
 function onGeneralInfoChange(player, info) {
     return {
@@ -37,6 +38,15 @@ function onSavesSectionChange(player, info) {
         },
     }
 } 
+function onCmSectionChange(player, info) {
+    return {
+        ...player,
+        combatManeuver: {
+            ...player.combatManeuver,
+            ...info,
+        },
+    }
+} 
 
 function Main() {
     const [player, setPlayer] = useState({
@@ -55,7 +65,10 @@ function Main() {
     const onSavesChange = (info) => {
         const playerInfo = onSavesSectionChange(player, info);
         setPlayer(playerInfo)
-        console.log(playerInfo)
+    }
+    const onCmChange = (info) => {
+        const playerInfo = onCmSectionChange(player, info);
+        setPlayer(playerInfo)
     }
 
     return (
@@ -68,7 +81,8 @@ function Main() {
             <DefenceClass />
             <SurpriseSection />
             <TouchAttackSection /> */}
-             <SavesSection onChange={onSavesChange} />
+             {/* <SavesSection onChange={onSavesChange} /> */}
+             <CmSection onChange={onCmChange} str={player.basicStats["модификатор-сил"]} dex={player.basicStats["модификатор-лвк"]} />
         </div>
     );
 }
