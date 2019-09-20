@@ -15,7 +15,7 @@ function BaseStats(props) {
     onChange(info);
   };
   return (
-    <div>
+    <div className="my-4">
       <div>
         <BoxLabel>СИЛ</BoxLabel>
         <BoxInput name="value-str" onChange={changedField} />

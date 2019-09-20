@@ -6,7 +6,7 @@ import BasicStats from './components/BasicStats';
 // import DefenceClass from './components/DefenceClass';
 // import SurpriseSection from './components/SurpriseSection';
 // import TouchAttackSection from './components/TouchAttackSection';
-// import SavesSection from './components/SavesSection';
+import SavesSection from './components/SavesSection';
 import CmSection from './components/CmSection';
 
 function onGeneralInfoChange(player, info) {
@@ -72,18 +72,28 @@ function Main() {
     }
 
     return (
-        <div>
-            <img src="/PathfinderLogo.png" alt="logo" />
-            {/* <GeneralInfo onChange={onGeneralChange} />
-            <BasicStats onChange={onBasicChange}/> */}
-            {/*<HealthSection />
+        <>
+            <div className="container flex mx-auto" >
+                <div className="w-full">
+                    <img src="/PathfinderLogo.png" alt="logo" />
+                </div>
+                <GeneralInfo onChange={onGeneralChange} />
+            </div>
+            <div className="container flex mx-auto ">
+                <BasicStats onChange={onBasicChange}/> 
+            </div>
+            <div className="container flex mx-auto">
+                <SavesSection onChange={onSavesChange} />
+            </div>
+            <div className="container flex mx-auto">
+                <CmSection onChange={onCmChange} str={player.basicStats["модификатор-сил"]} dex={player.basicStats["модификатор-лвк"]} />
+            </div>
+            {/* <HealthSection />
             <InitiativeSection />
             <DefenceClass />
-            <SurpriseSection />
-            <TouchAttackSection /> */}
-             {/* <SavesSection onChange={onSavesChange} /> */}
-             <CmSection onChange={onCmChange} str={player.basicStats["модификатор-сил"]} dex={player.basicStats["модификатор-лвк"]} />
-        </div>
+            <TouchAttackSection />
+            <SurpriseSection /> */}
+        </>
     );
 }
 
