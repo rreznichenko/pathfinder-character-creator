@@ -14,7 +14,7 @@ function CmSection({onChange, dex = 0, str = 0}) {
     onChange(info);
   };
   return (
-    <div>
+    <div className="text-left my-4">
       <div>
         <BoxLabel>CMB</BoxLabel>
         <BoxInput name="cmb-all" onChange={changedField} />

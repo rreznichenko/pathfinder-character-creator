@@ -4,12 +4,12 @@ import styled from 'styled-components';
 const StyledBox = styled.span`
     background-color: #222021;
     color: white;
-    padding: 5px;
     margin:3px;
+    width: 85px;
 `;
 
 function BoxLabel(props) {
-  return  <StyledBox>{props.children}</StyledBox>
+  return  <StyledBox className="inline-block text-center">{props.children}</StyledBox>
 }
 
 export default BoxLabel;
