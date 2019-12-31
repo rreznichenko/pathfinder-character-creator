@@ -71,6 +71,38 @@ function Main() {
         setPlayer(playerInfo)
     }
 
+    const onSubmit = () => {
+        fetch("http://localhost:3002/character/", {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(player), // тип данных в body должен соответвовать значению заголовка "Content-Type"
+        })
+        .then(response => {
+                fetch("http://localhost:3002/character/", {
+                'Content-Type': 'application/pdf',
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            }).then(response => {
+                return new Response(response.body);
+            }).then(stream => stream.blob())
+            .then(newBlob => {
+                const data = window.URL.createObjectURL(newBlob);
+                var link = document.createElement("a");
+                link.href = data;
+                link.download="file.pdf";
+                document.body.appendChild(link);
+                link.click();
+                setTimeout(function(){
+                    // For Firefox it is necessary to delay revoking the ObjectURL
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(data);
+                }, 100)
+            })
+        }); 
+    }
+
     return (
         <>
             <div className="container flex mx-auto" >
@@ -87,6 +119,9 @@ function Main() {
             </div>
             <div className="container flex mx-auto">
                 <CmSection onChange={onCmChange} str={player.basicStats["модификатор-сил"]} dex={player.basicStats["модификатор-лвк"]} />
+            </div>
+            <div className="container flex mx-auto">
+                <button onClick={onSubmit}>Create!</button>
             </div>
             {/* <HealthSection />
             <InitiativeSection />
